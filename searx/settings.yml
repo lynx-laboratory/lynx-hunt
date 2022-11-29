@@ -2,7 +2,7 @@ general:
   # Debug mode, only for development
   debug: false
   # displayed name
-  instance_name: "SearXNG"
+  instance_name: "Lynx Hunt"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
@@ -94,7 +94,7 @@ ui:
   # ui theme
   default_theme: lynxlabs
   # center the results ?
-  center_alignment: false
+  center_alignment: true
   # URL prefix of the internet archive, don't forgett trailing slash (if needed).
   # cache_url: "https://webcache.googleusercontent.com/search?q=cache:"
   # Default interface locale - leave blank to detect from browser information or
