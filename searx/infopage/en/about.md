@@ -1,3 +1,10 @@
+# About Lynx Hunt
+
+Lynx Hunt is a forked version of SearXNG. Lynx Hunt merely alters the appears,
+and all core functionality of the underlying SearXNG layer has not been altered.
+
+All donations will continue to go to the SearXNG Project.
+
 # About SearXNG
 
 SearXNG is a [metasearch engine], aggregating the results of other
@@ -27,10 +34,9 @@ If you do care about privacy, want to be a conscious user, or otherwise believe
 in digital freedom, make SearXNG your default search engine or run it on your
 own server!
 
-
 ## How do I set it as the default search engine?
 
-SearXNG supports [OpenSearch].  For more information on changing your default
+SearXNG supports [OpenSearch]. For more information on changing your default
 search engine, see your browser's documentation:
 
 - [Firefox]
@@ -39,12 +45,11 @@ search engine, see your browser's documentation:
 - [Chromium]-based browsers only add websites that the user navigates to without
   a path.
 
-
 ## How does it work?
 
 SearXNG is a fork from the well-known [searx] [metasearch engine] which was
-inspired by the [Seeks project].  It provides basic privacy by mixing your
-queries with searches on other platforms without storing search data.  SearXNG
+inspired by the [Seeks project]. It provides basic privacy by mixing your
+queries with searches on other platforms without storing search data. SearXNG
 can be added to your browser's search bar; moreover, it can be set as the
 default search engine.
 
@@ -57,19 +62,18 @@ SearXNG appreciates your concern regarding logs, so take the code from the
 [SearXNG sources] and run it yourself!
 
 Add your instance to this [list of public
-instances]({{get_setting('brand.public_instances')}}) to help other people
-reclaim their privacy and make the internet freer.  The more decentralized the
+instances](<{{get_setting('brand.public_instances')}}>) to help other people
+reclaim their privacy and make the internet freer. The more decentralized the
 internet is, the more freedom we have!
 
-
-[SearXNG sources]: {{GIT_URL}}
+[searxng sources]: {{GIT_URL}}
 [#searxng:matrix.org]: https://matrix.to/#/#searxng:matrix.org
-[SearXNG docs]: {{get_setting('brand.docs_url')}}
+[searxng docs]: {{get_setting('brand.docs_url')}}
 [searx]: https://github.com/searx/searx
 [metasearch engine]: https://en.wikipedia.org/wiki/Metasearch_engine
-[Weblate]: https://weblate.bubu1.eu/projects/searxng/
-[Seeks project]: https://beniz.github.io/seeks/
-[OpenSearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
-[Firefox]: https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox
-[Microsoft Edge]: https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine
-[Chromium]: https://www.chromium.org/tab-to-search
+[weblate]: https://weblate.bubu1.eu/projects/searxng/
+[seeks project]: https://beniz.github.io/seeks/
+[opensearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
+[firefox]: https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox
+[microsoft edge]: https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine
+[chromium]: https://www.chromium.org/tab-to-search
