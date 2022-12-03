@@ -5,9 +5,9 @@ rules:
   indentation:
     spaces: 2
 
-  # 120 chars should be enough, but don't fail if a line is longer
+  # 130 chars should be enough, but don't fail if a line is longer
   line-length:
-    max: 120
+    max: 130
     level: warning
     allow-non-breakable-words: true
 
