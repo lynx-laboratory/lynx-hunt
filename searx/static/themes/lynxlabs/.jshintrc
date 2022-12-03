@@ -2,7 +2,7 @@
   "proto": true,
   "globals": {
     "browser": true,
-    "jQuery": false,
+    "jQuery": true,
     "devel": true
   }
 }

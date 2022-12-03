@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% from 'lynxlabs/macros.html' import checkbox_onoff %}
 <html class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-aligment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}" lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl"{% endif %}>
 <head>
   <meta charset="UTF-8" />
@@ -40,20 +41,25 @@
         </div>
     {% endif %}
 
+    
     <nav id="links_on_top">
       {%- from 'lynxlabs/icons.html' import icon_big -%}
+      {%- block darkmode_link -%}
+        {{- checkbox_onoff('darkmode_toggle', preferences.get_value('simple_style') == 'dark', 'darkmode') -}}</span>
+      {%- endblock -%}
       {%- block linkto_about -%}
-        <a href="{{ url_for('info', pagename='about') }}" class="link_on_top_about">{{ icon_big('information-circle-outline') }}<span>{{ _('About') }}</span></a>
+        <a href="{{ url_for('info', pagename='about') }}" class="link_on_top_about">{{ icon_big('information-circle-outline') }}</a>
       {%- endblock -%}
       {%- block linkto_donate -%}
         {%- if donation_url -%}
-        <a href="{{ donation_url }}" class="link_on_top_donate">{{ icon_big('heart-outline') }}<span>{{ _('Donate') }}</span></a>
+        <a href="{{ donation_url }}" class="link_on_top_donate">{{ icon_big('heart-outline') }}</a>
         {%- endif -%}
       {%- endblock -%}
       {%- block linkto_preferences -%}
-        <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">{{ icon_big('menu-outline') }}<span>{{ _('Preferences') }}</span></a>
+        <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">{{ icon_big('menu-outline') }}</a>
       {%- endblock -%}
     </nav>
+    
     {% block header %}
     {% endblock %}
     {% block content %}
@@ -77,6 +83,7 @@
     </p>
   </footer>
   <!--[if gte IE 9]>-->
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/searxng.min.js') }}"></script>
   <!--<![endif]-->
 </body>

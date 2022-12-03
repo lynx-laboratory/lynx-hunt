@@ -397,6 +397,7 @@ input.checkbox-onoff[type="checkbox"] {
     outline: none;
   }
 
+  &:hover::after,
   &:focus::after {
     content: "";
     position: absolute;
@@ -439,6 +440,18 @@ input.checkbox-onoff[type="checkbox"],
   }
 }
 
+input.checkbox-onoff[type="checkbox"],
+.reversed-checkbox input.checkbox-onoff.darkmode[type="checkbox"]:checked {
+  background: var(--color-toolkit-checkbox-onoff-off-background);
+
+  &::before {
+    left: -0.4em;
+    content: "\2600";
+    color: var(--color-toolkit-checkbox-onoff-off-mark-color);
+    background: var(--color-toolkit-checkbox-onoff-off-mark-background);
+  }
+}
+
 input.checkbox-onoff[type="checkbox"]:checked,
 .reversed-checkbox input.checkbox-onoff[type="checkbox"] {
   background: var(--color-toolkit-checkbox-onoff-on-background);
@@ -446,6 +459,18 @@ input.checkbox-onoff[type="checkbox"]:checked,
   &::before {
     left: calc(100% - 1.5em);
     content: "\2713";
+    color: var(--color-toolkit-checkbox-onoff-on-mark-color);
+    background: var(--color-toolkit-checkbox-onoff-on-mark-background);
+  }
+}
+
+input.checkbox-onoff[type="checkbox"]:checked,
+.reversed-checkbox input.checkbox-onoff.darkmode[type="checkbox"] {
+  background: var(--color-toolkit-checkbox-onoff-on-background);
+
+  &::before {
+    left: calc(100% - 1.4em);
+    content: "\263E";
     color: var(--color-toolkit-checkbox-onoff-on-mark-color);
     background: var(--color-toolkit-checkbox-onoff-on-mark-background);
   }

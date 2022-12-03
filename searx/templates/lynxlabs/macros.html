@@ -133,13 +133,13 @@ endmacro -%}
   </section>
   {%- endmacro -%} {%- macro tabs_close() -%}
 </div>
-{%- endmacro -%} {%- macro checkbox_onoff(name, checked) -%}
+{%- endmacro -%} {%- macro checkbox_onoff(name, checked, class) -%}
 <input
   type="checkbox"
   name="{{ name }}"
   id="{{ name }}"
   value="None"
-  class="checkbox-onoff"
+  class="checkbox-onoff {{class}}"
   {%
   if
   checked
