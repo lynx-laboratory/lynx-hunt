@@ -139,7 +139,7 @@ def apply_schema(settings, schema, path_list):
 SCHEMA = {
     'general': {
         'debug': SettingsValue(bool, False, 'SEARXNG_DEBUG'),
-        'instance_name': SettingsValue(str, 'SearXNG'),
+        'instance_name': SettingsValue(str, 'SearXNG', 'INSTANCE_NAME'),
         'privacypolicy_url': SettingsValue((None, False, str), None),
         'contact_url': SettingsValue((None, False, str), None),
         'donation_url': SettingsValue((bool, str), "https://docs.searxng.org/donate.html"),
@@ -185,7 +185,7 @@ SCHEMA = {
         'theme_args': {
             'simple_style': SettingsValue(SIMPLE_STYLE, 'auto'),
         },
-        'center_alignment': SettingsValue(bool, False),
+        'center_alignment': SettingsValue(bool, False, 'UI_CENTER_ALIGNMENT'),
         'results_on_new_tab': SettingsValue(bool, False),
         'advanced_search': SettingsValue(bool, False),
         'query_in_title': SettingsValue(bool, False),
