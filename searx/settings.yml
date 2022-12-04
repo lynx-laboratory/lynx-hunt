@@ -14,11 +14,11 @@ general:
   enable_metrics: true
 
 brand:
-  new_issue_url: https://github.com/searxng/searxng/issues/new
+  new_issue_url: https://github.com/lynx-laboratory/lynx-hunt/issues/new
   docs_url: https://docs.searxng.org/
   public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/searxng/searxng/issues
+  issue_url: https://github.com/lynx-laboratory/lynx-hunt/issues
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
@@ -55,13 +55,13 @@ server:
   # instance's environment (make buildenv)
   port: 8888
   bind_address: "127.0.0.1"
-  base_url: false  # Possible values: false or "https://example.org/location".
-  limiter: false  # rate limit the number of request on the instance, block some bots
+  base_url: false # Possible values: false or "https://example.org/location".
+  limiter: false # rate limit the number of request on the instance, block some bots
 
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # change this!
+  secret_key: "ultrasecretkey" # change this!
   # Proxying image results through searx
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -1812,7 +1812,7 @@ engines:
     no_result_for_http_status: [404]
     about:
       website: https://www.woxikon.de/
-      wikidata_id:  # No Wikidata ID
+      wikidata_id: # No Wikidata ID
       use_official_api: false
       require_api_key: false
       results: HTML
