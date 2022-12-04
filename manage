@@ -437,7 +437,6 @@ docker.build() {
     local SEARXNG_GIT_VERSION
     local VERSION_GITCOMMIT
     local GITHUB_USER
-    local SEARXNG_IMAGE_NAME
     local BUILD
 
     build_msg DOCKER build
