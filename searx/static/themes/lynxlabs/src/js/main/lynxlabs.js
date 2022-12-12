@@ -5,21 +5,21 @@ function setUpDarkModetoggle () {
 
   darkModeSwitch.attr("checked", isDarkMode);
   darkModeSwitch.change(function () {
-    setEThemeStyle(this.checked);
+    setTheme(this.checked);
   });
 }
 
-function setEThemeStyle (isDarkMode) {
+function setTheme (isDarkMode) {
   $("html").toggleClass("theme-dark", isDarkMode);
 
-  var ethemeStyle = isDarkMode ? "dark" : "light";
+  var style = isDarkMode ? "dark" : "light";
   var options = {
-    method: "POST",
+    method: "PATCH",
   };
-  fetch("/preferences?simple_style=" + ethemeStyle, options).catch(function (
+  fetch("/preferences/style/" + style, options).catch(function (
     err
   ) {
-    console.log("Error while setting etheme style", err);
+    console.log("Error while setting theme style", err);
   });
 }
 

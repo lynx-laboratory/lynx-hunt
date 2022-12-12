@@ -933,6 +933,17 @@ def autocompleter():
     return Response(suggestions, mimetype=mimetype)
 
 
+@app.route('/preferences/style/<style>', methods=['PATCH'])
+def preferences_theme_style(style):
+    valid_styles = ['light', 'dark']
+    if style not in valid_styles:
+        return f"Theme style '{style}' not recognized. Must be one of {valid_styles}", 400
+    resp = make_response()
+    resp.set_cookie('simple_style', style)
+    resp.status_code = 204
+    return resp
+
+
 @app.route('/preferences', methods=['GET', 'POST'])
 def preferences():
     """Render preferences page && save user preferences"""
